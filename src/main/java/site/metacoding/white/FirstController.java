@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 //PUT, DELETE, GET, POST ->JS
 
 // 포스트맨 -> 4가지 요청을 쉽게 테스트 해볼 수 있다.
-@RestController //data 응답<-파일(jsp)만들 필요 없음
+@RestController //테스트용으로 data만 응답받을 예정이라 RestController 사용, jsp 파일 만들 필요가 없음
 public class FirstController {
 	@GetMapping("/first")
 	public String getData() {
