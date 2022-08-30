@@ -1,5 +1,6 @@
 package site.metacoding.white.domain;
 
+//리퀘스트 DTO(요청을 위한 Data Transfer Object)
 public class Third {
 	private Integer id;
 	private String title;
@@ -10,13 +11,13 @@ public class Third {
 //		// TODO Auto-generated method stub
 //		return super.toString();
 //	}
-	//모든걸 문자열로 return해준다
+//모든걸 문자열로 return해준다
+	//Object는 toString이란 메서드를 들고 있음
 	
 	@Override
 	public String toString() {
 		return "Third [id=" + id + ", title=" + title + ", content=" + content + "]";
 	}
-	//Object는 toString이란 메서드를 들고 있음
 	
 	public Third() {
 		System.out.println("Third 디폴트 생성자 실행됨");

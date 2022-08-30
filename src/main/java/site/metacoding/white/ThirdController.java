@@ -18,9 +18,7 @@ public class ThirdController {
 		return "id:"+third.getId()+", title:"+third.getTitle()+", content:"+third.getContent();
 	}
 	//private에 디폴트 생성자니까 일단 띄워야겠지
-	//리퀘스트 DTO(요청을 위한 Data Transfer Object)
 	//post로 보낸 데이터 버퍼로 읽음 그걸 파싱해서 setter를 때려줌 -> 오브젝트 만들어줌
-	
 	//DS이 parsing을 해줌(x-www-form-머시기 타입)
 	
 	//id는 시퀀스로 부여될테니 원래 DTO에는 title과 content만 있는게 맞음
@@ -31,11 +29,12 @@ public class ThirdController {
 		return third.toString();
 	}
 	//id를 수정하지 않을거니 원래 DTO에는 title과 content만 있는게 맞음
-	
+
 	@PutMapping("/third/{id}/json")
 	public String putJsonData(@PathVariable Integer id, @RequestBody Third third) {
 		return third.toString();
 	}
 	//버퍼드리더로 읽고 gson으로 파싱해준 것
+	//json으로 보내서 object로 받음
 	
 }
